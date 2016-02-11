@@ -161,7 +161,7 @@ module CarrierWave
         # [String] value of content-type
         #
         def content_type
-          @content_type || file.content_type
+          @content_type || file.try(:content_type)
         end
 
         ##
